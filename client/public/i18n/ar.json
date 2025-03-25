@@ -1,0 +1,105 @@
+{
+  "navbar":{
+    "Home":"الرئيسية",
+    "Products":"المنتجات",
+    "Cart":"السلة",
+    "Catigories":"الاقسام",
+    "Brands":"العلامات التجارية",
+    "SignOut":"تسجيل الخروج",
+    "Lang":"اللغة"
+  },
+  "authNavbar":{
+    "Login":"تسجيل الدخول",
+    "Register":"تسجيل"
+  },
+  "Login":{
+    "Login Now":"تسجيل الدخول الان",
+    "Email":"البريد الالكتروني",
+    "Email is required":"البريد الالكتروني مطلوب",
+    "Enter Valid Email":"ادخل بريد الكتروني صحيح",
+    "Password":"كلمة المرور",
+    "Password is required":"كلمة المرور مطلوبة",
+    "Password must be at least 6 chars":"يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "login":"تسجيل الدخول",
+    "Forget Password":"نسيت كلمة المرور",
+    "Don't have an account?":"ليس لديك حساب؟",
+    "Register":"تسجيل"
+  },
+  "Register":{
+    "Register Now":"تسجيل الان",
+    "Name":"الاسم",
+    "Name is required":"الاسم مطلوب",
+    "Name Should be more than or equal 3 chars":"يجب ان يكون الاسم اكثر من 3 حروف",
+    "Name Should be less than or equal 20 chars":"يجب ان يكون الاسم اقل من 20 حرف",
+    "Email":"البريد الالكتروني",
+    "Email is required":"البريد الالكتروني مطلوب",
+    "Enter Valid Email":"ادخل بريد الكتروني صحيح",
+    "Phone":"رقم الهاتف",
+    "Phone is required":"رقم الهاتف مطلوب",
+    "Accept only egypt phone numbers":"قم بالتاكد من رقم الهاتف الاغنية",
+    "Password":"كلمة المرور",
+    "Password is required":"كلمة المرور مطلوبة",
+    "Password must be at least 6 chars":"يجب ان تكون كلمة المرور على الاقل 6 حروف",
+    "RePassword":"تاكيد كلمة المرور",
+    "RePassword is required":"تاكيد كلمة المرور مطلوبة",
+    "Password confirmation is incorrect":"تاكيد كلمة المرور غير صحيح",
+    "Register":"تسجيل",
+    "Already have an account?":"لديك حساب بالفعل؟",
+    "Login":"تسجيل الدخول"
+  },
+  "home":{
+    "Populer Categories":"الاقسام الشعبية",
+    "WelcomeToFreshCart":"مرحبا بكم في FreshCart",
+    "FreshCart is a online store for all your daily needs. We provide you with the best quality products at the best prices.":"FreshCart هو متجر إلكتروني لجميع احتياجاتك اليومية. نحن نوفر لك أفضل المنتجات بأفضل الأسعار.",
+    "Shop Now":"تسوق الان",
+    "Search by Name...":"ابحث بالاسم...",
+    "Add To Cart":"اضافة الى السلة",
+    "Add to Wishlist":"اضافة الى قائمة الرغبات"
+  },
+  "ProductDetails":{
+    "Product Details":"تفاصيل المنتج",
+    "Add To Cart":"اضافة الى السلة"
+  },
+  "Cart":{
+    "Shop Cart:":"سلة التسوق:",
+    "Total Price:":"السعر الكلي:",
+    "Checkout":"الدفع",
+    "Delete":"حذف",
+    "Clear Cart":"تفريغ السلة",
+    "Price:":"السعر:"
+  },
+  "Order":{
+    "Order Details :":"تفاصيل الطلب :",
+    "Details:":"التفاصيل:",
+    "Details is required":"التفاصيل مطلوبة",
+    "Phone:":"الهاتف:",
+    "Phone is required":"الهاتف مطلوب",
+    "Enter Valid phone":"ادخل رقم هاتف صحيح",
+    "City:":"المدينة:",
+    "City is required":"المدينة مطلوبة",
+    "Cash Pay":"الدفع نقدا",
+    "online Pay":"الدفع الالكتروني"
+  },
+  "ForgotPassword":{
+    "Forgot Password":"نسيت كلمة المرور",
+    "Email":"البريد الالكتروني",
+    "Email is required":"البريد الالكتروني مطلوب",
+    "Enter Valid Email":"ادخل بريد الكتروني صحيح",
+    "Send Reset Code":"ارسال كود اعادة التعيين",
+    "Reset Code":"كود اعادة التعيين",
+    "Reset Code is required":"كود اعادة التعيين مطلوب",
+    "Enter Valid Reset Code":"ادخل كود اعادة التعيين صحيح",
+    "Verify Reset Code":"تاكيد كود اعادة التعيين",
+    "New Password":"كلمة المرور الجديدة",
+    "New Password is required":"كلمة المرور الجديدة مطلوبة",
+    "Password must be at least 6 chars":"يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "Reset Password":"اعادة تعيين كلمة المرور"
+  },
+  "Footer":{
+    "Get The FreshCart App":"احصل على تطبيق FreshCart",
+    "We Will Send You a Link, Open it on Your Phone to download the app":"سنرسل لك رابطًا ، افتحه على هاتفك لتنزيل التطبيق",
+    "Email":"البريد الالكتروني",
+    "Share App Link":"مشاركة رابط التطبيق",
+    "Payment partners":"شركاء الدفع"
+  }
+}

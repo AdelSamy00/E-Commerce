@@ -1,0 +1,23 @@
+.brand-img{
+  height: 120px;
+  object-fit: scale-down;
+  display: block;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.brand:hover{
+  box-shadow: 0 0 10px #11bd1168;
+  border-radius: 5px;
+}
+.underline:hover{
+  text-decoration: underline var(--main-color);
+}
+.product-img{
+  height: 120px;
+  object-fit: cover;
+  width: 120px;
+  display: block;
+  margin-inline: auto;
+  overflow: hidden;
+}

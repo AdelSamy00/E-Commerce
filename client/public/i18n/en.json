@@ -1,0 +1,105 @@
+{
+  "navbar":{
+    "Home":"Home",
+    "Products":"Products",
+    "Cart":"Cart",
+    "Catigories":"Catigories",
+    "Brands":"Brands",
+    "SignOut":"SignOut",
+    "Lang":"Lang"
+  },
+  "authNavbar":{
+    "Login":"Login",
+    "Register":"Register"
+  },
+  "Login":{
+    "Login Now":"Login Now",
+    "Email":"Email",
+    "Email is required":"Email is required",
+    "Enter Valid Email":"Enter Valid Email",
+    "Password":"Password",
+    "Password is required":"Password is required",
+    "Password must be at least 6 chars":"Password must be at least 6 chars",
+    "login":"login",
+    "Forget Password":"Forget Password",
+    "Don't have an account?":"Don't have an account?",
+    "Register":"Register"
+  },
+  "Register":{
+    "Register Now":"Register Now",
+    "Name":"Name",
+    "Name is required":"Name is required",
+    "Name Should be more than or equal 3 chars":"Name Should be more than or equal 3 chars",
+    "Name Should be less than or equal 20 chars":"Name Should be less than or equal 20 chars",
+    "Email":"Email",
+    "Email is required":"Email is required",
+    "Enter Valid Email":"Enter Valid Email",
+    "Phone":"Phone",
+    "Phone is required":"Phone is required",
+    "Accept only egypt phone numbers":"Accept only egypt phone numbers",
+    "Password":"Password",
+    "Password is required":"Password is required",
+    "Password must be at least 6 chars":"Password must be at least 6 chars",
+    "RePassword":"RePassword",
+    "RePassword is required":"RePassword is required",
+    "Password confirmation is incorrect":"Password confirmation is incorrect",
+    "Register":"Register",
+    "Already have an account?":"Already have an account?",
+    "Login":"Login"
+  },
+  "home":{
+    "Populer Categories":"Populer Categories",
+    "WelcomeToFreshCart":"Welcome To FreshCart",
+    "FreshCart is a online store for all your daily needs. We provide you with the best quality products at the best prices.":"FreshCart is a online store for all your daily needs. We provide you with the best quality products at the best prices.",
+    "Shop Now":"Shop Now",
+    "Search by Name...":"Search by Name...",
+    "Add To Cart":"Add To Cart",
+    "Add to Wishlist":"Add to Wishlist"
+  },
+  "ProductDetails":{
+    "Product Details":"Product Details",
+    "Add To Cart":"Add To Cart"
+  },
+  "Cart":{
+    "Shop Cart:":"Shop Cart:",
+    "Total Price:":"Total Price:",
+    "Checkout":"Checkout",
+    "Delete":"Delete",
+    "Clear Cart":"Clear Cart",
+    "Price:":"Price:"
+  },
+  "Order":{
+    "Order Details :":"Order Details :",
+    "Details:":"Details:",
+    "Details is required":"Details is required",
+    "Phone:":"Phone:",
+    "Phone is required":"Phone is required",
+    "Enter Valid phone":"Enter Valid phone",
+    "City:":"City:",
+    "City is required":"City is required",
+    "Cash Pay":"Cash Pay",
+    "online Pay":"online Pay"
+  },
+  "ForgotPassword":{
+    "Forgot Password":"Forgot Password",
+    "Email":"Email",
+    "Email is required":"Email is required",
+    "Enter Valid Email":"Enter Valid Email",
+    "Send Reset Code":"Send Reset Code",
+    "Reset Code":"Reset Code",
+    "Reset Code is required":"Reset Code is required",
+    "Enter Valid Reset Code":"Enter Valid Reset Code",
+    "Verify Reset Code":"Verify Reset Code",
+    "New Password":"New Password",
+    "New Password is required":"New Password is required",
+    "Password must be at least 6 chars":"Password must be at least 6 chars",
+    "Reset Password":"Reset Password"
+  },
+  "Footer":{
+    "Get The FreshCart App":"Get The FreshCart App",
+    "We Will Send You a Link, Open it on Your Phone to download the app":"We Will Send You a Link, Open it on Your Phone to download the app",
+    "Email":"Email",
+    "Share App Link":"Share App Link",
+    "Payment partners":"Payment partners"
+  }
+}

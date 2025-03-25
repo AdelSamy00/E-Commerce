@@ -1,0 +1,40 @@
+<section class="container-fluid row my-3">
+  @for (brand of brands(); track brand._id) {
+    <div class="col-md-4 cursor-pointer underline  p-2" (click)="getProductsByBrand(brand._id)">
+      <img [src]="brand.image" [alt]="brand.name" class="w-100 brand-img">
+      <h3 class="text-main">{{ getLanguage() === 'ar' ? brand.name_ar : brand.name}}</h3>
+    </div>
+  }
+</section>
+
+<section #productsSection class="row g-3 my-3">
+  @if (products().length > 0) {
+    @for (product of products(); track $index) {
+      <div class="col-md-3">
+        <div class="product p-3 rounded" >
+          <div [routerLink]="['/details', product?._id]">
+            <div class="product-img">
+              <img [src]="product.images[0]" class="w-100" [alt]="product.title">
+            </div>
+            <h3 class="small text-main">{{ getLanguage() == 'ar'? product.category.name_ar : product.category.name | trem :2}}</h3>
+            <h4 class="h6">{{ getLanguage() == 'ar'? product.title_ar :product.title | uppercase}}</h4>
+            <div class="d-flex align-items-center justify-content-between">
+              <span>{{product.price | currency : "EGP "}}</span>
+              <div class="">
+                @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage); track $index) {
+                  <span><i class="fas fa-star rating-color"></i></span>
+                }
+                @if (product.ratingsAverage % 1 !== 0) {
+                  <i class="fa-solid fa-star-half-stroke rating-color"></i>
+                }
+                <span class="text-muted">{{product.ratingsAverage}}</span>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn-main w-100" (click)="addProductToCart(product._id)">{{"home.Add To Cart" | translate}}</button>
+        </div>
+      </div>
+    }
+  }
+</section>

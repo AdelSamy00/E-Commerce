@@ -1,0 +1,40 @@
+@if (product) {
+  <section >
+    <h1 class="text-center text-main my-2">{{"ProductDetails.Product Details" |translate}}</h1>
+    <div class="row align-items-center my-lg-5">
+      <div class="col-md-3">
+        <!-- <img [src]="product.imageCover" class="w-100" [alt]="product.title"> -->
+        <owl-carousel-o [options]="customOptionsImages">
+          <ng-template carouselSlide [id]="product._id">
+            <img [src]="product.imageCover" class="w-100" [alt]="product.title">
+          </ng-template>
+          @for (image of product.images; track $index) {
+          <ng-template carouselSlide>
+            <div>
+              <img [src]="image" class="w-100" [alt]="product.title">
+            </div>
+            </ng-template>
+          }
+        </owl-carousel-o>
+      </div>
+      <div class="col-md-9">
+        <h2>{{getLanguage() === 'ar' ? product.title_ar : product.title}}</h2>
+        <p class="text-muted">{{ getLanguage() === 'ar' ? product.description_ar : product.description}}</p>
+        <p>{{getLanguage() === 'ar' ? product.category.name_ar : product.category.name}}</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <span>{{product.price | currency : "EGP "}}</span>
+          <div class="">
+            @for (num of [1,2,3,4,5].slice(0,product.ratingsAverage); track $index) {
+              <span><i class="fas fa-star rating-color"></i></span>
+            }
+            @if (product.ratingsAverage % 1 !== 0) {
+              <i class="fa-solid fa-star-half-stroke rating-color"></i>
+            }
+            <span class="text-muted">{{product.ratingsAverage}}</span>
+          </div>
+        </div>
+        <button class="btn-main w-100">{{"ProductDetails.Add To Cart" | translate}}</button>
+      </div>
+    </div>
+  </section>
+}

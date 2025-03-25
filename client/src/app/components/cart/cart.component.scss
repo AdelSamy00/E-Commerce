@@ -1,0 +1,41 @@
+.borderClass{
+  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  width: 75%;
+  margin-inline: auto;
+  display: block;
+}
+
+@media screen and (max-width: 455px) {
+  .imageCantainer{
+    flex: 0 0 auto;
+    justify-content: center;
+  }
+  
+}
+
+
+@media (min-width: 455px) and (max-width: 575px) {
+  .imageCantainer{
+    flex: 0 0 auto;
+    width: 25%;
+  }
+  .infoCantainer{
+    flex: 0 0 auto;
+    width: 75%;
+  }
+}
+
+@media (min-width: 576px) {
+  .imageCantainer{
+    flex: 0 0 auto;
+  width: 8.33333333%;
+  }
+  .quantityCantainer{
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
+  .infoCantainer{
+    flex: 0 0 auto;
+    width: 75%;
+  }
+}

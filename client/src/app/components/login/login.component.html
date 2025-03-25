@@ -1,0 +1,73 @@
+<section class="bg-main-light shadow p-2 my-4 rounded-4">
+  <h1 class="h2 text-main">{{"Login.Login Now"|translate}}:</h1>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+    <div class="my-2">
+      <label for="email" class="form-label">{{"Login.Email"| translate }}:</label>
+      <input
+        type="email"
+        [ngClass]="{
+          'is-invalid': loginForm.get('email')?.errors && (loginForm.get('email')?.touched || loginForm.get('email')?.dirty),
+          'is-valid': loginForm.get('email')?.valid
+        }"
+        formControlName="email"
+        class="form-control"
+        id="email"
+      />
+      <!-- Validation -->
+      @if(loginForm.get('email')?.errors &&
+      (loginForm.get('email')?.touched || loginForm.get('email')?.dirty)){
+      <div class="alert alert-danger w-50">
+        @if (loginForm.get('email')?.getError('required')) {
+        <p>{{"Login.Email is required" | translate}}</p>
+        }@else if (loginForm.get('email')?.getError('email')) {
+        <p>{{"Login.Enter Valid Email" | translate}}</p>
+        }
+      </div>
+      }
+    </div>
+    <div class="my-2">
+      <label for="password" class="form-label">{{"Login.Password"|translate}}:</label>
+      <input
+        type="password"
+        [ngClass]="{
+          'is-invalid': loginForm.get('password')?.errors && (loginForm.get('password')?.touched || loginForm.get('password')?.dirty),
+          'is-valid': loginForm.get('password')?.valid
+        }"
+        formControlName="password"
+        class="form-control"
+        id="password"
+      />
+      <!-- Validation -->
+      @if(loginForm.get('password')?.errors &&
+      (loginForm.get('password')?.touched ||
+      loginForm.get('password')?.dirty)){
+      <div class="alert alert-danger w-50">
+        @if (loginForm.get('password')?.getError('required')) {
+        <p>{{"Login.Password is required" | translate}}</p>
+        }@else if (loginForm.get('password')?.getError('pattern')) {
+        <p>{{"Login.Password must be at least 6 chars" | translate}}</p>
+        }
+      </div>
+      }
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <a class="text-main" routerLink="/forgot-password" >{{"Login.Forget Password" | translate}}</a>
+      <button
+        [disabled]="loginForm.invalid || isLoading"
+        type="submit"
+        class="btn btn-main d-block "
+      >
+        {{"Login.login" | translate}} @if (isLoading) {
+        <span><i class="fas fa-spin fa-spinner"></i></span>
+        }
+      </button>
+    </div>
+    <!-- show error message from backend -->
+    @if (ErrorMsg) {
+    <div class="alert alert-danger w-50 m-0">
+      <p>{{ ErrorMsg }}</p>
+    </div>
+    }
+  </form>
+</section>
