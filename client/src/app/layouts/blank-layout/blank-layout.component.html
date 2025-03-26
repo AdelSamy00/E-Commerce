@@ -1,4 +1,8 @@
-<app-nav-blank></app-nav-blank>
+@if(userData().role == 'admin'){
+  <app-nav-admin></app-nav-admin>
+}@else{
+  <app-nav-blank></app-nav-blank>
+}
 <div class="container-fluid">
   <router-outlet></router-outlet>
 </div>

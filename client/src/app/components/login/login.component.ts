@@ -43,7 +43,11 @@ export class LoginComponent {
             // save user data in service
             this._AuthService.saveUserData();
             // navigate to home page
-            this._Router.navigate(['/home']);
+            if(this._AuthService.userData.user?.role === 'admin'){
+              this._Router.navigate(['/admin']);
+            }else{
+              this._Router.navigate(['/home']);
+            }
           }
         },
         error: (err:HttpErrorResponse) => {

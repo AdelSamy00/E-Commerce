@@ -12,6 +12,18 @@
     "Login":"Login",
     "Register":"Register"
   },
+  "adminNavbar":{
+    "Dashboard":"Dashboard",
+    "Home":"Home",
+    "Products":"Products",
+    "Orders":"Orders",
+    "Users":"Users",
+    "Add Product":"Add Product",
+    "Add Category":"Add Category",
+    "Add Brand":"Add Brand",
+    "SignOut":"SignOut",
+    "Lang":"Lang"
+  },
   "Login":{
     "Login Now":"Login Now",
     "Email":"Email",

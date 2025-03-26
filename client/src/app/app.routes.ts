@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { authGuard } from './core/guards/auth.guard';
 import { logedGuard } from './core/guards/loged.guard';
+import { adminGuard } from './core/guards/admin.guard';
 
 export const routes: Routes = [
   {
@@ -30,5 +31,23 @@ export const routes: Routes = [
       { path: 'order/:cartId', loadComponent: () => import('./components/order/order.component').then(c => c.OrderComponent) },
     ],
   },
+  /* Admin Routes */
+  {
+    path: '',
+    loadComponent: () => import('./layouts/admin-layout/admin-layout.component').then(c => c.AdminLayoutComponent),
+    canActivate: [adminGuard],
+    children: [
+      { path: '', redirectTo: 'admin', pathMatch: 'full' },
+      { path: 'admin', loadComponent: () => import('./components/home/home.component').then(c => c.HomeComponent) },
+    ],
+  },
+
   { path: '**', loadComponent: () => import('./components/notfound/notfound.component').then(c => c.NotfoundComponent) },
 ];
+
+
+/* 
+{ path: 'admin', loadComponent: () => import('./components/home/home.component').then(c => c.HomeComponent) , canActivate: [adminGuard]},
+  
+
+*/

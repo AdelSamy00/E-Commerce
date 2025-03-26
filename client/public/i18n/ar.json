@@ -12,6 +12,18 @@
     "Login":"تسجيل الدخول",
     "Register":"تسجيل"
   },
+  "adminNavbar":{
+    "Dashboard":"لوحة التحكم",
+    "Home":"الرئيسية",
+    "Products":"المنتجات",
+    "Orders":"الطلبات",
+    "Users":"المستخدمين",
+    "Add Product":"اضافة منتج",
+    "Add Category":"اضافة قسم",
+    "Add Brand":"اضافة علامة تجارية",
+    "SignOut":"تسجيل الخروج",
+    "Lang":"اللغة"
+  },
   "Login":{
     "Login Now":"تسجيل الدخول الان",
     "Email":"البريد الالكتروني",
