@@ -1,3 +1,4 @@
+import { validateProduct } from "../Joi/Schema.js";
 import Products from "../models/Product.js";
 
 
@@ -47,6 +48,26 @@ export const getProductById = async (req, res) => {
       res.status(200).json({data: product});
     } else {
       res.status(404).json({ message: "Product not found" });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: error.message });
+  }
+}
+
+export const createProduct = async (req, res) => {
+  try {
+    console.log(req.files); // req.files.images -- req.files.imageCover
+    const { error, value } = validateProduct(req.body);
+    if (error) {
+      return res.status(400).json({ message: error.message });
+    }else{
+      /* Uplode images to cloudinary and get the urls */
+
+      /* Create product */
+      const product = await Products.create({...req.body, imageCover: req.files.imageCover[0].filename, images: req.files.images.map((image) => image.filename)});
+      const newProduct = await product.save();
+      res.status(201).json(newProduct);
     }
   } catch (error) {
     console.error(error);
