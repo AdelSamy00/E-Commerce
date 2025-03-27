@@ -39,6 +39,7 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: 'admin', pathMatch: 'full' },
       { path: 'admin', loadComponent: () => import('./components/home/home.component').then(c => c.HomeComponent) },
+      { path: 'addProduct', loadComponent: () => import('./components/add-product/add-product.component').then(c => c.AddProductComponent) },
     ],
   },
 

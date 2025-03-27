@@ -1,0 +1,151 @@
+<section class="bg-main-light shadow p-2 my-4 rounded-4">
+  <h1 class="text-center text-main my-2">Add Product</h1>
+  <form class="" [formGroup]="addProductForm" (ngSubmit)="addProduct()">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="row g-3">
+          <!-- title -->
+          <div class="col-md-6">
+            <label for="title" class="form-label">Title:</label>
+            <input type="text" formControlName="title" class="form-control" id="title">
+            <!-- Validation -->
+            @if (addProductForm.get('title')?.errors && (addProductForm.get('title')?.touched || addProductForm.get('title')?.dirty)) {
+                @if (addProductForm.get('title')?.getError('required')) {
+                  <p class="text-danger fw-semibold">Title is required</p>
+                }
+            }
+          </div>
+          <!-- title_ar -->
+          <div class="col-md-6">
+            <label for="title_ar" class="form-label">Title Arabic:</label>
+            <input type="text" formControlName="title_ar" class="form-control" id="title_ar">
+            <!-- Validation -->
+            @if (addProductForm.get('title_ar')?.errors && (addProductForm.get('title_ar')?.touched || addProductForm.get('title_ar')?.dirty)) {
+                @if (addProductForm.get('title_ar')?.getError('required')) {
+                  <p class="text-danger fw-semibold">Title Arabic is required</p>
+                }
+            }
+          </div>
+          <!-- description -->
+          <div class="col-md-12">
+            <label for="description" class="form-label">Description:</label>
+            <textarea formControlName="description" class="form-control" id="description"></textarea>
+            <!-- Validation -->
+            @if (addProductForm.get('description')?.errors && (addProductForm.get('description')?.touched || addProductForm.get('description')?.dirty)) {
+              @if (addProductForm.get('description')?.getError('required')) {
+                <p class="text-danger fw-semibold">Description is required</p>
+              }
+            }
+          </div>
+          <!-- description_ar -->
+          <div class="col-md-12">
+            <label for="description_ar" class="form-label">Description Arabic:</label>
+            <textarea formControlName="description_ar" class="form-control" id="description_ar"></textarea>
+            <!-- Validation -->
+            @if (addProductForm.get('description_ar')?.errors && (addProductForm.get('description_ar')?.touched || addProductForm.get('description_ar')?.dirty)) {
+              @if (addProductForm.get('description_ar')?.getError('required')) {
+                <p class="text-danger fw-semibold">Description Arabic is required</p>
+              }
+            }
+          </div>
+          <!-- slug -->
+          <div class="col-md-6">
+            <label for="slug" class="form-label">Slug:</label>
+            <input type="text" formControlName="slug" class="form-control" id="slug">
+            <!-- Validation -->
+            @if (addProductForm.get('slug')?.errors && (addProductForm.get('slug')?.touched || addProductForm.get('slug')?.dirty)) {
+              @if (addProductForm.get('slug')?.getError('required')) {
+                <p class="text-danger fw-semibold">Slug is required</p>
+              }
+            }
+          </div>
+          <!-- slug_ar -->
+          <div class="col-md-6">
+            <label for="slug_ar" class="form-label">Slug Arabic:</label>
+            <input type="text" formControlName="slug_ar" class="form-control" id="slug_ar">
+            <!-- Validation -->
+            @if (addProductForm.get('slug_ar')?.errors && (addProductForm.get('slug_ar')?.touched || addProductForm.get('slug_ar')?.dirty)) {
+              @if (addProductForm.get('slug_ar')?.getError('required')) {
+                <p class="text-danger fw-semibold">Slug Arabic is required</p>
+              }
+            }
+          </div>
+          <!-- category -->
+          <div class="col-md-6">
+            <label for="category" class="form-label">Category:</label>
+            <select formControlName="category" class="form-select" id="category">
+              @for (cat of categories(); track $index) {
+                <option value="{{cat._id}}">{{cat.name}}</option>
+              }
+            </select>
+            <!-- Validation -->
+              @if (addProductForm.get('category')?.errors && (addProductForm.get('category')?.touched || addProductForm.get('category')?.dirty)) {
+                @if (addProductForm.get('category')?.getError('required')) {
+                  <p class="text-danger fw-semibold">Category is required</p>
+                }
+              }
+          </div>
+          <!-- brand -->
+          <div class="col-md-6">
+            <label for="brand" class="form-label">Brand:</label>
+            <select formControlName="brand" class="form-select" id="brand">
+              @for (brand of brands(); track $index) {
+                <option value="{{brand._id}}">{{brand.name}}</option>
+              }
+            </select>
+            <!-- Validation -->
+            @if (addProductForm.get('brand')?.errors && (addProductForm.get('brand')?.touched || addProductForm.get('brand')?.dirty)) {
+              @if (addProductForm.get('brand')?.getError('required')) {
+                <p class="text-danger fw-semibold">Brand is required</p>
+              }
+            }
+          </div>
+          <!-- quantity -->
+          <div class="col-md-6">
+            <label for="quantity" class="form-label">Quantity:</label>
+            <input type="number" formControlName="quantity" class="form-control" id="quantity">
+            <!-- Validation -->
+            @if (addProductForm.get('quantity')?.errors && (addProductForm.get('quantity')?.touched || addProductForm.get('quantity')?.dirty)) {
+              @if (addProductForm.get('quantity')?.getError('required')) {
+                <p class="text-danger fw-semibold">Quantity is required</p>
+              }
+              @if (addProductForm.get('quantity')?.getError('min')) {
+                <p class="text-danger fw-semibold">Quantity must be greater than 0</p>
+              }
+            }
+          </div>
+          <!-- price -->
+          <div class="col-md-6">
+            <label for="price" class="form-label">Price:</label>
+            <input type="number" formControlName="price" class="form-control" id="price">
+            <!-- Validation -->
+            @if (addProductForm.get('price')?.errors && (addProductForm.get('price')?.touched || addProductForm.get('price')?.dirty)) {
+              @if (addProductForm.get('price')?.getError('required')) {
+                <p class="text-danger fw-semibold">Price is required</p>
+              }
+              @if (addProductForm.get('price')?.getError('min')) {
+                <p class="text-danger fw-semibold">Price must be greater than 0</p>
+              }
+            }
+          </div>
+        </div>
+      </div>
+      <!-- images -->
+      <div class="col-md-3">
+          <div class="row g-3">
+            <div class="">
+              <label for="images" class="form-label">Product Images:</label>
+              <input id="images" type="file" class="form-control " multiple (change)="onImageChange($event)" aria-label="File input example">
+          </div>
+          <div class="">
+              <label for="imageCover" class="form-label">Product Image Cover:</label>
+              <input id="imageCover" type="file" class="form-control " (change)="onCoverImageChange($event)" aria-label="File input example">
+          </div>
+          </div>
+      </div>
+    </div>
+  </form>
+  <div class="d-flex justify-content-end">
+    <button type="submit" (click)="addProduct()" class="btn btn-main" [disabled]="addProductForm.invalid || productImages.length == 0 || !coverImage">Add Product</button>
+  </div>
+</section>
